@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+        
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll position-custom head-custom"
+                  style="--bs-scroll-height: 100px;">
+                  <!--position-custom-->
+        
+                  <li class="nav-item margin-custom h-custom">
+                    <a class="nav-link text-white" href="/forum">Forum</a>
+                  </li>
+        
+                  <li class="nav-item margin-custom h-custom">
+                    <a class="nav-link text-white" href="/support">Support</a>
+                  </li>
+        
+                  <!-- margin-custom-->
+                  <li class="m-2 margin-custom">
+                    <a class="navbar-brand text-white position-custom on" href="/">The Dictionary of Obscure Sorrows</a>
+                  </li>
+        
+                  <li class="nav-item margin-custom h-custom">
+                    <a class="nav-link text-white" href="/wwa">Who we are</a>
+                  </li>
+        
+                  <li class="nav-item dropdown margin-custom h-custom">
+                    <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Connect
+                    </a>
+                    <ul class="dropdown-menu bg-dark border  border-secondary">
+                      <!-- dropdown-custom -->
+                      <li><a class="dropdown-item text-white dropdown-custom" href="/login">Login</a></li>
+                      <li><a class="dropdown-item text-white dropdown-custom" href="/signin">Sign-in</a></li>
+        
+                    </ul>
+                  </li>
+                </ul>
+        
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+    <main>
+        <%-body%>
+    </main>
+  
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
