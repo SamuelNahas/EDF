@@ -1,0 +1,107 @@
+#footer {
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer .footer-content {
+    width: 100%;
+}
+
+#footer .footer-content .footer-menu p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #919496;
+    font-size: 0.8rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.socials i {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    transition: all 300ms ease;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    font-weight: bold;
+    color: #919496;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+
+.footer-info .footer-info-items {
+    display: flex;
+    list-style: none;
+    margin: auto;
+}
+
+.footer-info .footer-info-items .footer-info-item {
+    margin: 0 0.5rem;
+}
+
+.footer-info .footer-info-items .footer-info-item:hover {
+    cursor: pointer;
+}
+
+.img_footer{
+    width: 25%;
+}
+
+.footer_copy{
+    margin-top: 1%;
+}
+
+.nav-custom{
+    vertical-align: middle;
+}
+
+.head-custom li{
+    margin: 0px 20px;
+}
+
+.position-custom{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-h-custom{
+    box-shadow: 10px 12px #333;
+}
+
+.card-h-custom:hover{
+    color: #333;
+}
+
+.card-subtitle{
+    font-size: 80%;
+}
+
+.container-custom{
+    margin-top: 6%;
+}
+
+.on{
+    color: rgb(170, 189, 206) !important;
+}
+
+.h-custom{
+    height: 4rem;
+}
+
+.img-custom{
+    max-width: 4%;
+}

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="/publico/css/form-album.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/src/public/Style.css">
+
+  <title>Cadastro</title>
+
+</head>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll position-custom head-custom"
+              style="--bs-scroll-height: 100px;">
+              <!--position-custom-->
+    
+              <li class="nav-item margin-custom h-custom">
+                <a class="nav-link text-white" href="/forum">Forum</a>
+              </li>
+    
+              <li class="nav-item margin-custom h-custom">
+                <a class="nav-link text-white" href="/support">Support</a>
+              </li>
+    
+              <!-- margin-custom-->
+              <li class="m-2 margin-custom">
+                <a class="navbar-brand text-white position-custom on" href="/">Competicoes esportivas </a>
+              </li>
+    
+              <li class="nav-item margin-custom h-custom">
+                <a class="nav-link text-white" href="/wwa">Mais sobre</a>
+              </li>
+    
+              <li class="nav-item dropdown margin-custom h-custom">
+                <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Connect
+                </a>
+                <ul class="dropdown-menu bg-dark border  border-secondary">
+                  <!-- dropdown-custom -->
+                  <li><a class="dropdown-item text-white dropdown-custom" href="/login">Login</a></li>
+                  <li><a class="dropdown-item text-white dropdown-custom" href="/signin">Sign-in</a></li>
+    
+                </ul>
+              </li>
+            </ul>
+    
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+<body>
+  <main>
+    <div class="container d-flex flex-column col-md-6">
+      <div class="container">
+        <h2>Cadastro</h2>        
+      </div>
+
+      <form id="dataForm" name="dataForm" class="row g-3" 
+        action="/salvar" method="POST"
+        onsubmit="return validarFormulario()">
+        <div class="container div-tab">
+          <div class="col-md-12">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" size="250">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="cpf" class="form-label">CPF</label>
+              <input type="text" class="form-control" id="cpf" name="cpf">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="col-md-6">
+            <label for="periodo" class="form-label">periodo</label>
+            <select id="periodo" name="periodo" class="form-select">
+              <option selected>Selecionar</option>
+              <option value="1">Matutino</option>
+              <option value="2">Vespertino</option>
+              <option value="3">Diurno</option>
+            </select>
+          </div>
+        </div>
+            <div class="col-md-6">
+              <label for="curso" class="form-label">Curso</label>
+              <select id="curso" name="curso" class="form-select">
+                <option selected>Selecionar</option>
+                <option value="1">Informática</option>
+                <option value="2">Mecânica</option>
+                <option value="3">Eletrotecnica</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="semestre" class="form-label">Semestre</label>
+              <select id="semestre" name="semestre" class="form-select">
+                <option selected>Selecionar</option>
+                <option value="1">Primeiro</option>
+                <option value="2">Segundo</option>
+                <option value="3">Terceiro</option>
+                <option value="4">Quarto</option>
+                <option value="5">Quinto</option>
+                <option value="6">Sexto</option>
+                <option value="7">Sétimo</option>
+              </select>
+            </div>
+          </div>
+          </div>
+       
+
+          <div class="container d-flex justify-content-around div-botao">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="/publico/img/alerta.png" class="rounded me-2" alt="Alerta!" style="width: 20px;">
+          <strong class="me-auto">Hummm.. Aconteceu algo!</strong>
+          <small></small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div id="msgToast" class="toast-body div-toast">
+          Hello, world! This is a toast message.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+  <script   src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/publico/js/form-album.js"></script>
+</body>
+
+<footer id="footer">
+    <div class="footer-content">
+        <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <a rel="nofollow" target="_blank" style="color:white">
+            Feito com <span class="heart">❤</span> por Samuel Nahas</a>
+    </div>
+
+    <div class="footer-info">
+        <ul class="footer-info-items">
+            <li class="footer-info-item">Legal</li>
+            <li class="footer-info-item">Centro de Privacidade</li>
+            <li class="footer-info-item">Política de Privacidade</li>
+            <li class="footer-info-item">Cookies</li>
+            <li class="footer-info-item">Sobre Anúncios</li>
+        </ul>
+    </div>
+
+    <div class="footer_copy">
+      <small>&copy; Copyright 2022</small>
+      <a href="https://www.ifms.edu.br"><img class="img_footer" src="img/Img/marcaifms.png" alt=""></a>
+    </div>
+
+
+</footer>
+
+<script src="https://kit.fontawesome.com/1427d1eda2.js" crossorigin="anonymous"></script>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+</html>

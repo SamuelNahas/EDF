@@ -5,9 +5,6 @@ class HomeController{
      index(req,res){
         res.render("home")
      }
-     salvar(req,res){
-        UserService.salvar(req.body);
-     }
 
 }
 
